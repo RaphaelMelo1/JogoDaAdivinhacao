@@ -1,0 +1,123 @@
+:root {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.6rem;
+  display: grid; /*aqui podemos usar display grid no body, pois o único filho que ele tem é o main*/
+  place-items: center;
+  /* o place-items funcionará igual o margin, porém aqui o body não está com 100vh. E se colocarmos com 100vh?*/
+  height: 100vh;
+  /*eita, o main ficou um pouco abaixo do meio, para subi-lo vamos lá no main usar um margin-top*/
+}
+body, button, input {
+  font-family: 'DM Sans', sans-serif;
+}
+body:before {
+	content:"";
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	z-index:-1; 
+	background:#D8D8D8;
+	background: linear-gradient(287deg, #c2e9fb 0%, #a1c4fd 100%) ;
+}
+
+main {
+  background: #FFFFFF;
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+  border-radius: .6rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+
+  width: min(48.8rem, 90%);
+  height: 33.3rem;
+  margin-top: -12rem; /*Agora não está 100% no meio, mas essa ******harmonia****** do main estar um pouco acima do meio é muito bom.*/
+  text-align: center;
+}
+
+/* tudo o que é screen1 a partir daqui*/
+
+.hide {
+  display: none;
+}
+
+main h1 {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 5.9rem;
+  margin-bottom: 1.6rem;
+
+  color: #34355B;
+}
+main p {
+  font-size: 1.9rem;
+  line-height: 150%;
+  font-weight: 400;
+  
+  color: rgba(52, 53, 91, 0.8);
+}
+form {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: center; /*depois do flex, o form saiu do meio, então com justify-content: center; nós jogamos ele para o centro de novo.*/
+}
+input, button {
+  border: none;
+  outline: none;
+  padding: 1.6rem;
+}
+form input {
+  background-color: #DCE2E9;
+  width: 4.3rem;
+  height: 5.3rem;
+  font-weight: 400;
+
+  border-radius: .4rem 0 0 .4rem;
+  font-size: 2rem;
+}
+form button {
+  font-weight: 700;
+  font-size: 1.6rem;
+
+  width: 8.2rem;
+  height: 5.3rem;
+
+  background-color: #7879F1;
+  color: #fff;
+
+  border-radius: 0 .4rem .4rem 0;
+  cursor: pointer;
+}
+input[type=number]::-webkit-inner-spin-button { 
+  appearance: none;
+}
+
+/* screen2 */
+h2 {
+  font-family: 'DM Sans';
+  color: #34355B;
+  margin: 3.3rem 0 3.3rem 0;
+}
+.screen2 button {
+  border-radius: .4rem;
+  background-color: #7879F1;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  width: 20rem;
+  cursor: pointer;
+
+  transition: background .4s;
+}
+button:hover, button:focus {
+  background-color: #6464dc;
+  box-shadow: 0 0 0.5rem #6464dc;
+}

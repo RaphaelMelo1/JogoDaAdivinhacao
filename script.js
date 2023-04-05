@@ -5,6 +5,7 @@ const screen1 = document.querySelector('.screen1')
 const screen2 = document.querySelector('.screen2')
 const btnTry = document.querySelector('#btnTry')
 const btnReset = document.querySelector('#btnReset')
+let pTryAgain = document.querySelector('#tryAgain')
 let xAttempts = 1 
 
 /* FUNÇÕES */
@@ -16,7 +17,11 @@ function handleTryClick(event){
   
   if(Number(inputNumber.value) == randomNumber){
     toggleScreen()
-    screen2.querySelector('h2').innerText = `Você acertou em ${xAttempts} tentativas!`
+    screen2.querySelector('h2').innerText = `You won in your ${xAttempts}° attempt!`
+    pTryAgain.innerText = ''
+  } 
+  else if(Number(inputNumber.value) != randomNumber){
+    pTryAgain.innerText = 'Try again!'
   }
   inputNumber.value = ""
   xAttempts++

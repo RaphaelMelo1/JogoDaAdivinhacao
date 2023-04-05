@@ -63,8 +63,11 @@ main p {
   
   color: rgba(52, 53, 91, 0.8);
 }
+#tryAgain {
+  margin-top: 2rem;
+}
 form {
-  margin-top: 4.8rem;
+  margin-top: 4rem;
   display: flex;
   justify-content: center; /*depois do flex, o form saiu do meio, então com justify-content: center; nós jogamos ele para o centro de novo.*/
 }
@@ -114,6 +117,7 @@ h2 {
   line-height: 2.1rem;
   width: 20rem;
   cursor: pointer;
+  margin-top: 2.5rem;
 
   transition: background .4s;
 }
